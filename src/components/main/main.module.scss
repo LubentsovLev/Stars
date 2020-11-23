@@ -1,0 +1,19 @@
+.main {
+  min-height: 95vh;
+  background-image: url(https://png.pngtree.com/back_origin_pic/03/93/32/c84c8a72a0993707d6af53c86be276ed.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.title {
+  color: #fff;
+  margin-bottom: 20px;
+}
+.btn {
+  color: #39e1ff !important;
+  border: 1px solid #39e1ff !important;
+}

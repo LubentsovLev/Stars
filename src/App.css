@@ -1,6 +1,51 @@
 .App {
   text-align: center;
 }
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+button,
+textarea,
+input,
+a {
+  outline: none;
+}
+body {
+  font-weight: 400;
+  background-color: #f1f7f9;
+  /* max-width: 1920px;
+  margin: 0 auto; */
+}
+ul,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+a {
+  display: inline;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+.App {
+  text-align: center;
+}
 
 .App-logo {
   height: 40vmin;
@@ -12,10 +57,14 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
+.app_main {
+  min-height: 100vh;
+  padding-top: 57px;
+}
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 60px;
   display: flex;
   flex-direction: column;
   align-items: center;
