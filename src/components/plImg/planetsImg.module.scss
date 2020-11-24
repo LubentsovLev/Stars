@@ -8,6 +8,15 @@ img {
   border-radius: 10px;
 }
 .main {
-  background-color: rgb(77, 255, 225);
-  min-height: 100vh;
+  background-color: #000;
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  // min-height: 70vh;
+}
+.containerMap {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
 }

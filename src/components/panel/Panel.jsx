@@ -21,6 +21,8 @@ import WhatshotIcon from "@material-ui/icons/Whatshot";
 import SearchIcon from "@material-ui/icons/Search";
 import HomeIcon from "@material-ui/icons/Home";
 import { useDispatch, useSelector } from "react-redux";
+import PublicIcon from "@material-ui/icons/Public";
+import ExploreIcon from "@material-ui/icons/Explore";
 const useStyles = makeStyles({
   list: {
     width: 250,
@@ -95,7 +97,7 @@ export default function Panel(props) {
           <List>
             <NavLink
               className={classes.ln}
-              to="/Genius"
+              to="/"
               activeClassName={"ln_active"}
               // onClick={() => {
               //   dispatch(addBooks());
@@ -111,6 +113,46 @@ export default function Panel(props) {
                   /> */}
                 </ListItemIcon>
                 <ListItemText primary="Home" />
+              </ListItem>
+            </NavLink>
+            <NavLink
+              className={classes.ln}
+              to="/PlanetsImg"
+              activeClassName={"ln_active"}
+              // onClick={() => {
+              //   dispatch(addBooks());
+              // }}
+            >
+              <ListItem button key="Starred">
+                <ListItemIcon>
+                  <PublicIcon color="primary"></PublicIcon>
+                  {/* <img
+                    className={classes.gen}
+                    src="https://savemusic.me/uploads/cover/artist/ffd9392b39d6af001961cb83ba4a2fd5.jpg"
+                    alt=""
+                  /> */}
+                </ListItemIcon>
+                <ListItemText primary="Planets" />
+              </ListItem>
+            </NavLink>
+            <NavLink
+              className={classes.ln}
+              to="/Planets" 
+              activeClassName={"ln_active"}
+              // onClick={() => {
+              //   dispatch(addBooks());
+              // }}
+            >
+              <ListItem button key="Starred">
+                <ListItemIcon>
+                  <ExploreIcon color="primary"></ExploreIcon>
+                  {/* <img
+                    className={classes.gen}
+                    src="https://savemusic.me/uploads/cover/artist/ffd9392b39d6af001961cb83ba4a2fd5.jpg"
+                    alt=""
+                  /> */}
+                </ListItemIcon>
+                <ListItemText primary="Expeditions" />
               </ListItem>
             </NavLink>
           </List>

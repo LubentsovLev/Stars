@@ -43,19 +43,22 @@ export const setIsFetching = (isFetching) => {
     isFetching,
   };
 };
-export const addPlanets = () => async (dispath) => {
+export const addPlanets = (DateOne , DateTwo) => async (dispath) => {
   dispath(setIsFetching(true));
-  let response = await Planets.getPlanets();
-  let response2 = await Planets.getImgs();
-  dispath(setPlanets(response.response));
-  console.log(response);
+  let response = await Planets.getPlanets(DateOne , DateTwo);
+  dispath(setPlanets(response.data));
   dispath(setIsFetching(false));
 };
 export const addPlanetsPhotos = (q) => async (dispath) => {
   dispath(setIsFetching(true));
   let response = await Planets.getImgs(q);
   dispath(setPhotos(response.data));
-  console.log(response.data);
+  dispath(setIsFetching(false));
+};
+export const addPlanetsPhotosNext = (q) => async (dispath) => {
+  dispath(setIsFetching(true));
+  let response = await Planets.getNextPage(q);
+  dispath(setPhotos(response.data));
   dispath(setIsFetching(false));
 };
 export default geniusReducer;

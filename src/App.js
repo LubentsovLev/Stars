@@ -10,6 +10,7 @@ import Header from "./components/header/header";
 import Main from "./components/main/main";
 import PlanetsContainer from "./components/planetsContainer/planetsContainer";
 import PlanetsImg from "./components/plImg/planetsImg";
+import StickyFooter from "./components/common/M_footer";
 
 function App() {
   return (
@@ -31,7 +32,7 @@ function App() {
           <Route exact path="*" render={() => <div>404 NOT FOUND</div>} />
         </Switch>
       </div>
-      <Planet />
+      <StickyFooter />
     </div>
   );
 }
