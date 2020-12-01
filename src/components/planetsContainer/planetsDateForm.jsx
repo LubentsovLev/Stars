@@ -12,7 +12,7 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "column",
     alignItems: "center",
     justifyContent: "center",
-    minHeight: "80vh",
+    minHeight: "60vh",
   },
   textField: {
     marginLeft: theme.spacing(1),
@@ -50,7 +50,7 @@ function PlanetsDateForm() {
         id="date"
         label="Start date"
         type="date"
-        defaultValue="2020-05-24"
+        defaultValue="2020-11-10"
         className={classes.textField}
         InputLabelProps={{
           shrink: true,
@@ -64,7 +64,7 @@ function PlanetsDateForm() {
         id="date"
         label="End date"
         type="date"
-        defaultValue="2020-05-24"
+        defaultValue="2020-11-24"
         className={classes.textField}
         InputLabelProps={{
           shrink: true,

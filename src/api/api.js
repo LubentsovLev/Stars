@@ -30,4 +30,21 @@ export const Planets = {
         return data;
       });
   },
+  NasaId(id = "behemoth-black-hole-found-in-an-unlikely-place_26209716511_o") {
+    return axios
+      .get(`https://images-api.nasa.gov/search?nasa_id=${id}`)
+      .then((data) => {
+        return data.data;
+      });
+  },
+  // NasaAudios(
+  //   id = "behemoth-black-hole-found-in-an-unlikely-place_26209716511_o"
+  // ) {
+  //   return axios
+  //     .get(`https://images-api.nasa.gov/search?media_type=audio`)
+  //     .then((data) => {
+  //       console.log(data.data);
+  //       return data.data;
+  //     });
+  // },
 };

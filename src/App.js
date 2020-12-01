@@ -11,6 +11,8 @@ import Main from "./components/main/main";
 import PlanetsContainer from "./components/planetsContainer/planetsContainer";
 import PlanetsImg from "./components/plImg/planetsImg";
 import StickyFooter from "./components/common/M_footer";
+import FavoritePage from "./components/favorite/favorite";
+import OneFavorite from "./components/oneFavorite/oneFavorite";
 
 function App() {
   return (
@@ -28,7 +30,10 @@ function App() {
 
           <Route path="/PlanetsImg" render={() => <PlanetsImg />} />
           <Route path="/Planets" render={() => <PlanetsContainer />} />
+          <Route path="/favorite" render={() => <FavoritePage />} />
+          <Route path="/FavoriteInfo" render={() => <OneFavorite />} />
           <Route path="/" render={() => <Main />} />
+
           <Route exact path="*" render={() => <div>404 NOT FOUND</div>} />
         </Switch>
       </div>

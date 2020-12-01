@@ -121,8 +121,8 @@ const Header = (props) => {
   const classes = useStyles();
   let dispatch = useDispatch();
   const [red, setred] = React.useState(false);
-  // const query = useSelector((state) => state.genius.query);
-  React.useEffect(() => {}, []);
+  const favorites = useSelector((state) => state.planets.favorites);
+  React.useEffect(() => {}, [favorites]);
   const handleSearch = (event) => {
     // dispatch(Search(SearchInput.current.firstChild.value));
   };
@@ -154,11 +154,11 @@ const Header = (props) => {
                 <GeniusFromReduxSearch onSubmit={GenOnSub} />
                 <NavLink
                   className={classes.ln}
-                  to="/"
+                  to="/favorite"
                   activeClassName={"ln_active"}
                 >
                   <Button className={classes.cart} color="default">
-                    <Badge badgeContent={1} color="secondary">
+                    <Badge badgeContent={favorites.length} color="secondary">
                       <Favorite></Favorite>
                     </Badge>
                   </Button>

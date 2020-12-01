@@ -40,9 +40,9 @@ const useStyles = makeStyles((theme) => ({
   Copyright: {
     color: "#fff !important",
   },
-  CopyrightLN:{
-    padding: '0 10px' ,
-    color : "gray",
+  CopyrightLN: {
+    padding: "0 10px",
+    color: "gray",
   },
   logo: {
     width: 40,
@@ -76,7 +76,9 @@ export default function StickyFooter() {
           {/* <Copyright className={classes.Copyright} /> */}
           <p className={classes.Copyright}>
             Copyright ©
-            <a className={classes.CopyrightLN} href="https://www.nasa.gov/">Go to official site</a>
+            <a className={classes.CopyrightLN} href="https://www.nasa.gov/">
+              Official site
+            </a>
             2020.
           </p>
         </Container>

@@ -15,6 +15,8 @@ import FavoriteIcon from "@material-ui/icons/Favorite";
 import ShareIcon from "@material-ui/icons/Share";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import MoreVertIcon from "@material-ui/icons/MoreVert";
+import { useDispatch } from "react-redux";
+import { setFavorites } from "../../redux/planets_reducer";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -57,7 +59,7 @@ const useStyles = makeStyles((theme) => ({
 export default function PlImgCard(props) {
   const classes = useStyles();
   const [expanded, setExpanded] = React.useState(false);
-
+  const dispatch = useDispatch();
   const handleExpandClick = () => {
     setExpanded(!expanded);
   };
@@ -74,11 +76,11 @@ export default function PlImgCard(props) {
             />
           </Avatar>
         }
-        action={
-          <IconButton aria-label="settings">
-            <MoreVertIcon />
-          </IconButton>
-        }
+        // action={
+        //   <IconButton aria-label="settings">
+        //     <MoreVertIcon />
+        //   </IconButton>
+        // }
         // title={inst.data[0].title}
         subheader={"Data  " + inst.data[0].date_created}
       />
@@ -93,12 +95,17 @@ export default function PlImgCard(props) {
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
-        <IconButton aria-label="add to favorites">
+        <IconButton
+          onClick={() => {
+            dispatch(setFavorites(inst));
+          }}
+          aria-label="add to favorites"
+        >
           <FavoriteIcon />
         </IconButton>
-        <IconButton aria-label="share">
+        {/* <IconButton aria-label="share">
           <ShareIcon />
-        </IconButton>
+        </IconButton> */}
         <IconButton
           className={clsx(classes.expand, {
             [classes.expandOpen]: expanded,

@@ -1,0 +1,33 @@
+.containerMap {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding-top: 20px;
+}
+.main {
+  min-height: 80vh;
+}
+.card {
+  max-width: 150px;
+  //   border-radius: 12px;
+  margin: 4px;
+  background-color: rgb(133, 133, 133);
+}
+.btn {
+  font-size: 10px;
+}
+.title {
+  font-size: 12px !important;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.img {
+  border-radius: 5px;
+  max-height: 100px;
+}
+.imgInner {
+  //   max-height: 40px;
+  padding: 10px;
+}

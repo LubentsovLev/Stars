@@ -21,6 +21,7 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: 320,
     minWidth: 320,
     margin: 4,
+    backgroundColor: "#ffa0e8",
   },
   media: {
     height: 0,
@@ -89,12 +90,12 @@ export default function PlanetsCard(props) {
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
-        <IconButton aria-label="add to favorites">
+        {/* <IconButton aria-label="add to favorites">
           <FavoriteIcon />
         </IconButton>
         <IconButton aria-label="share">
           <ShareIcon />
-        </IconButton>
+        </IconButton> */}
         <IconButton
           className={clsx(classes.expand, {
             [classes.expandOpen]: expanded,

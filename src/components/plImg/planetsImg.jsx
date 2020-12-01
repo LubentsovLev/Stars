@@ -38,17 +38,7 @@ const PlanetsImg = ({ center, zoom }) => {
             <div className={s.containerMap}>
               {console.log(photos)}
               {photos.collection.items.map((i) => {
-                return (
-                  <PlImgCard key={i.data[0].nasa_id} data={i} />
-                  //   <div key={i} className="">
-                  //     <h1 className={s.title}>{i.data[0].title}</h1>
-                  //     <img
-                  //       className={s.img}
-                  //       src={i.links ? i.links[0].href : ""}
-                  //       alt=""
-                  //     />
-                  //   </div>
-                );
+                return <PlImgCard key={i.data[0].nasa_id} data={i} />;
               })}
             </div>
           ) : (
